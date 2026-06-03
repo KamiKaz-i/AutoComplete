@@ -1,0 +1,81 @@
+.container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 40%;
+    min-width: 400px;
+}
+.search-input{
+    margin: 0; 
+    border: none;
+    padding:5px;
+    margin:5px,5px,5px,5px;
+    flex-grow: 2;
+}
+.search-input:focus-visible{
+    outline: none;
+}
+.input-wrapper{
+
+    width: 100%;
+    display:inline-flex;
+    border-radius: 2px;
+    border: 1px lightgray solid;
+    min-height: 40px;
+}
+.selected-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    user-select: none;
+    gap: 5px;
+    margin: 5px;
+}
+.selected-item{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(229,229,229);
+    border-radius: 0.2rem;
+    padding:5px;
+    word-break: break-all;
+    user-select: none;
+}
+.selected-item >button{
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: inherit;
+}
+.selection-list{
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.selection-list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.selection-list-item>div{
+    border-radius: 0.1rem;
+    width: 100%;
+    padding: 5px;
+    margin:2px;
+    overflow: hidden;
+}
+.selection-list-item>div:hover{
+    background-color: rgb(229,229,229);
+}
+
+.selection-list-item.active>div{
+    background-color: rgb(229,229,229);
+}
