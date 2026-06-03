@@ -5,7 +5,7 @@ interface Tag {
   tag: string;
 }
 
-const adresses: Tag[] = [
+const tags: Tag[] = [
   {  tag: "React" },
   {  tag: "TypeScript" },
   {  tag: "CSS" },
@@ -15,7 +15,7 @@ function App(){
   const [selectedItems,setSelectedItems] = useState<Tag[]>([]);
   return(
     <>
-      <AutoComplete listOfItems={adresses} onChange={(val)=>{setSelectedItems(val)}} selectedItems={selectedItems} getTag={(item)=>item.tag} createTag={(inputValue)=>{
+      <AutoComplete listOfItems={tags} onChange={(val)=>{setSelectedItems(val)}} selectedItems={selectedItems} getTag={(item)=>item.tag} createTag={(inputValue)=>{
         return {
           tag:inputValue,
         }
