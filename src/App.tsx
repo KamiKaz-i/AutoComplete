@@ -14,13 +14,11 @@ const tags: Tag[] = [
 function App(){
   const [selectedItems,setSelectedItems] = useState<Tag[]>([]);
   return(
-    <>
       <AutoComplete listOfItems={tags} onChange={(val)=>{setSelectedItems(val)}} selectedItems={selectedItems} getTag={(item)=>item.tag} createTag={(inputValue)=>{
         return {
           tag:inputValue,
         }
       }}/>
-    </>
   )
 }
 
